@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lkw.stall_management.mapper.ConductMapper">
+
+    <resultMap id="BaseResultMap" type="com.lkw.stall_management.entity.Conduct">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="evidenceUrl1" column="evidence_url1" jdbcType="VARCHAR"/>
+            <result property="evidenceUrl2" column="evidence_url2" jdbcType="VARCHAR"/>
+            <result property="evidenceUrl3" column="evidence_url3" jdbcType="VARCHAR"/>
+            <result property="stallId" column="stall_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="managerId" column="manager_id" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="INTEGER"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,content,
+        evidence_url1,evidence_url2,evidence_url3,
+        stall_id,user_id,manager_id,
+        state,is_deleted,gmt_create,
+        gmt_modified
+    </sql>
+</mapper>

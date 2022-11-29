@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lkw.stall_management.mapper.StallMapper">
+
+    <resultMap id="BaseResultMap" type="com.lkw.stall_management.entity.Stall">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="owner" column="owner" jdbcType="VARCHAR"/>
+            <result property="phonenumber" column="phonenumber" jdbcType="VARCHAR"/>
+            <result property="star" column="star" jdbcType="INTEGER"/>
+            <result property="introduce" column="introduce" jdbcType="VARCHAR"/>
+            <result property="lng" column="lng" jdbcType="DECIMAL"/>
+            <result property="lat" column="lat" jdbcType="DECIMAL"/>
+            <result property="district" column="district" jdbcType="VARCHAR"/>
+            <result property="isLegal" column="is_legal" jdbcType="INTEGER"/>
+            <result property="state" column="state" jdbcType="INTEGER"/>
+            <result property="profileUrl" column="profile_url" jdbcType="VARCHAR"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,owner,
+        phonenumber,star,introduce,
+        lng,lat,district,
+        is_legal,state,profile_url,
+        is_deleted,gmt_create,gmt_modified
+    </sql>
+</mapper>
