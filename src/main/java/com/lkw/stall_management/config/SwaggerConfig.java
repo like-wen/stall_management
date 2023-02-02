@@ -13,10 +13,10 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 //丝袜哥地址:
-//http://localhost:8080/doc.html#/home
+//http://localhost:8081/doc.html#/home
 @Configuration
 @EnableKnife4j
-public class WebMvcConfig extends WebMvcConfigurationSupport {
+public class SwaggerConfig extends WebMvcConfigurationSupport {
 	@Override
 	protected void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");

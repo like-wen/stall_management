@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @MapperScan("com.lkw.stall_management.mapper")
-public class EduConfig {
+public class MybatisPlusConfig {
     //乐观锁
 
     //分页

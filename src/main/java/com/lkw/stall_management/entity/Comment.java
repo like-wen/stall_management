@@ -49,7 +49,6 @@ public class Comment implements Serializable {
      */
     private Integer isDeleted;
 
-
     /**
      * 创建时间
      */
@@ -61,6 +60,7 @@ public class Comment implements Serializable {
      */
     @TableField(fill=FieldFill.INSERT_UPDATE)
     private Date gmtModified;
+
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
