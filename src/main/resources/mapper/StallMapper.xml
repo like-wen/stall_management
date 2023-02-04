@@ -11,7 +11,7 @@
             <result property="phonenumber" column="phonenumber" jdbcType="VARCHAR"/>
             <result property="star" column="star" jdbcType="INTEGER"/>
             <result property="introduce" column="introduce" jdbcType="VARCHAR"/>
-            <result property="lng" column="lng" jdbcType="DECIMAL"/>
+            <result property="lon" column="lon" jdbcType="DECIMAL"/>
             <result property="lat" column="lat" jdbcType="DECIMAL"/>
             <result property="district" column="district" jdbcType="VARCHAR"/>
             <result property="isLegal" column="is_legal" jdbcType="INTEGER"/>
@@ -25,7 +25,7 @@
     <sql id="Base_Column_List">
         id,name,owner,
         phonenumber,star,introduce,
-        lng,lat,district,
+        lon,lat,district,
         is_legal,state,profile_url,
         is_deleted,gmt_create,gmt_modified
     </sql>

@@ -1,7 +1,9 @@
 package com.lkw.stall_management.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
-
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -48,7 +50,7 @@ public class Stall implements Serializable {
     /**
      * 经度
      */
-    private BigDecimal lng;
+    private BigDecimal lon;
 
     /**
      * 纬度
@@ -83,13 +85,11 @@ public class Stall implements Serializable {
     /**
      * 创建时间
      */
-    @TableField(fill= FieldFill.INSERT)
     private Date gmtCreate;
 
     /**
-     * 更新时间
+     * 修改时间
      */
-    @TableField(fill=FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
     @TableField(exist = false)
@@ -113,7 +113,7 @@ public class Stall implements Serializable {
             && (this.getPhonenumber() == null ? other.getPhonenumber() == null : this.getPhonenumber().equals(other.getPhonenumber()))
             && (this.getStar() == null ? other.getStar() == null : this.getStar().equals(other.getStar()))
             && (this.getIntroduce() == null ? other.getIntroduce() == null : this.getIntroduce().equals(other.getIntroduce()))
-            && (this.getLng() == null ? other.getLng() == null : this.getLng().equals(other.getLng()))
+            && (this.getLon() == null ? other.getLon() == null : this.getLon().equals(other.getLon()))
             && (this.getLat() == null ? other.getLat() == null : this.getLat().equals(other.getLat()))
             && (this.getDistrict() == null ? other.getDistrict() == null : this.getDistrict().equals(other.getDistrict()))
             && (this.getIsLegal() == null ? other.getIsLegal() == null : this.getIsLegal().equals(other.getIsLegal()))
@@ -134,7 +134,7 @@ public class Stall implements Serializable {
         result = prime * result + ((getPhonenumber() == null) ? 0 : getPhonenumber().hashCode());
         result = prime * result + ((getStar() == null) ? 0 : getStar().hashCode());
         result = prime * result + ((getIntroduce() == null) ? 0 : getIntroduce().hashCode());
-        result = prime * result + ((getLng() == null) ? 0 : getLng().hashCode());
+        result = prime * result + ((getLon() == null) ? 0 : getLon().hashCode());
         result = prime * result + ((getLat() == null) ? 0 : getLat().hashCode());
         result = prime * result + ((getDistrict() == null) ? 0 : getDistrict().hashCode());
         result = prime * result + ((getIsLegal() == null) ? 0 : getIsLegal().hashCode());
@@ -158,7 +158,7 @@ public class Stall implements Serializable {
         sb.append(", phonenumber=").append(phonenumber);
         sb.append(", star=").append(star);
         sb.append(", introduce=").append(introduce);
-        sb.append(", lng=").append(lng);
+        sb.append(", lon=").append(lon);
         sb.append(", lat=").append(lat);
         sb.append(", district=").append(district);
         sb.append(", isLegal=").append(isLegal);
