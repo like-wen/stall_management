@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
 * @author 李可文
 * @description 针对表【stall】的数据库操作Service实现
-* @createDate 2023-02-04 17:44:46
+* @createDate 2023-02-05 20:50:01
 */
 @Service
 public class StallServiceImpl extends ServiceImpl<StallMapper, Stall>

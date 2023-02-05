@@ -1,7 +1,9 @@
 package com.lkw.stall_management.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
-
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -60,7 +62,7 @@ public class Conduct implements Serializable {
     private String managerId;
 
     /**
-     * 状态:1是正在审判,2是审判成功,3是证据不足审判失败
+     * 状态:正在审判,审判完成,证据不足审判取消
      */
     private Integer state;
 
@@ -72,13 +74,11 @@ public class Conduct implements Serializable {
     /**
      * 创建时间
      */
-    @TableField(fill= FieldFill.INSERT)
     private Date gmtCreate;
 
     /**
-     * 更新时间
+     * 修改时间
      */
-    @TableField(fill=FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
     @TableField(exist = false)

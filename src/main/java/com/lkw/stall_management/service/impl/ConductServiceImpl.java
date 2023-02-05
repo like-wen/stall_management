@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
 * @author 李可文
 * @description 针对表【conduct】的数据库操作Service实现
-* @createDate 2022-11-29 15:08:05
+* @createDate 2023-02-05 21:24:26
 */
 @Service
 public class ConductServiceImpl extends ServiceImpl<ConductMapper, Conduct>
