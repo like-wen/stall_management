@@ -2,6 +2,7 @@ package com.lkw.stall_management.controller;
 
 import com.lkw.stall_management.service.OssService;
 import com.lkw.stall_management.utils.R;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @RequestMapping("/oss/fileoss")
 @CrossOrigin
+@Api("oss图像存储")
 @Slf4j
 public class OssController {
 
