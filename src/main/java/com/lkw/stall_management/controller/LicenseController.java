@@ -4,14 +4,18 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lkw.stall_management.entity.License;
 import com.lkw.stall_management.service.LicenseService;
 import com.lkw.stall_management.utils.R;
+import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @CrossOrigin
+@Api(tags = "证件")
 @RequestMapping("/license")
 public class LicenseController {
     @Autowired
